@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekart | Product Dashboard</title>
+</head>
+<body>
+    <h1 align="center">Product Dashboard</h1>
+
+    <a href="/productapp/addproduct"><button>Add Product</button></a>
+    <br><br>
+    <table border="1" align="center">
+        <tr>
+            <th>Sr. No</th>
+            <th>Product Name</th>
+            <th>Price per Qty</th>
+            <th>Product Quantity</th>
+            <th>Category</th>
+            <th>Is_Available?</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for product in products  %}
+        <tr>
+            <th>{{product.id}}</th>
+            <th>{{product.name}}</th>
+            <th>{{product.price}}</th>
+            <th>{{product.qty}}</th>
+            {% if product.cat == 1 %}
+            <th>Mobile</th>
+            {% elif product.cat == 2 %}
+            <th>Shoes</th>
+            {% else %}
+            <th>Clothes</th>
+            {% endif %}
+
+            {% if product.is_available %}
+            <th>Yes</th>
+            {% else %}
+            <th>No</th>
+            {% endif %}
+            <th><a href="/productapp/edit/{{product.id}}">EDIT</a></th>
+            <th><a href="/productapp/delete/{{product.id}}">DELETE</a></th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

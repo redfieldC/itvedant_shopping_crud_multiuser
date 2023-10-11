@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <h1>Welcome to homepage</h1>
+    <h3>Welcome message: {{msg}}</h3>
+    <h4> which is greater? {{x}} or {{y}}</h2>
+    {% if x > y %}
+      <h2>{{x}} is the greatest</h2>
+    {% elif x < y %}
+      <h2>{{y}} is the greatest</h2>
+
+    {% else %}
+      <h2>{{x}} and {{y}} are equal</h2>
+    {% endif  %}
+    <h2>Below is implementation of for loop</h2>
+    {% for a in number %}
+      <h2>CUrrent number: {{a}}</h2>
+    {% endfor %}
+
+
+    <button onclick="hello()">Click ME</button>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

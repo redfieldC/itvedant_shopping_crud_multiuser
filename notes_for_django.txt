@@ -1,0 +1,15 @@
+client is browser and the url is the request
+
+pip freeze gives all modules that are installed
+
+pip help  gives all help
+
+to install virtual environment : pip install virtualenv
+
+ to create virtualenvironemnt : virtualenv env
+                                python -m virtualenv env
+--------------------------------------------------------------------------
+Django project structure
+
+1) django has one project and many applications
+    Functionality(or Feature) = Application       in Django  

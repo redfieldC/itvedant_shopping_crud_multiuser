@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekart Add product</title>
+  </head>
+  <body>
+    <h1 align="center">Add product</h1>
+    <form method="POST">
+        {% csrf_token %}
+      <table align="center" border="">
+        <tr>
+          <td><strong>Product Name:</strong></td>
+          <td><input type="text" name="pname" id="" /></td>
+        </tr>
+
+        <tr>
+          <td><strong>Product Price(per item):</strong></td>
+          <td><input type="number" name="price" id="" /></td>
+        </tr>
+
+        <tr>
+          <td><strong>Product Quantity:</strong></td>
+          <td><input type="number" name="qty" id="" /></td>
+        </tr>
+
+        <tr>
+          <td><strong>Product category</strong></td>
+          <td>
+            <select name="cat" id="">
+              <option value="1">mobile</option>
+              <option value="2">shoes</option>
+              <option value="3">clothes</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Is_available?:</strong>
+          </td>
+          <td>
+            <input type="radio" name="avail" value="1">YES
+            <input type="radio" name="avail" value="0">NO
+          </td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2">
+                <input   type="submit" value="Add Product">
+
+            </td>
+        </tr>
+      </table>
+    </form>
+
+    <a href="/productapp/productdash"><button>Back</button></a>
+
+  </body>
+</html>
