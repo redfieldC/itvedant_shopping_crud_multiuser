@@ -83,7 +83,7 @@ DATABASES = {
         'HOST':'localhost',
         'USER':'root',
         'PASSWORD':'',
-        'PORT':'3306'
+        'PORT':'3307'
     }
 }
 
@@ -136,3 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 print("Hello from settings.py")
 
 print("BASE_DIR ------------------>",BASE_DIR)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

@@ -19,6 +19,8 @@ class Product(models.Model):
     qty = models.IntegerField(verbose_name="Product Quantity")
     cat = models.IntegerField(verbose_name="Product Category",choices=CAT)
     is_available = models.BooleanField(verbose_name="Product Availability",choices=AVAIL)
+    pdetails = models.CharField(max_length=200)
+    pimage = models.ImageField(upload_to='appimage/product', verbose_name='Product Image')
 
     def __str__(self):
         return self.name
